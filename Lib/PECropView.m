@@ -201,9 +201,9 @@ static const CGFloat MarginRight = MarginLeft;
     CGFloat width = CGRectGetWidth(cropRect);
     CGFloat height = CGRectGetHeight(cropRect);
     if (width < height) {
-        width = height * aspectRatio;
-    } else {
         height = width * aspectRatio;
+    } else {
+        width = height * aspectRatio;
     }
     cropRect.size = CGSizeMake(width, height);
     [self zoomToCropRect:cropRect];
